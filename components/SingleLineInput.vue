@@ -3,42 +3,32 @@
 </template>
 
 <script>
-    import { SingleLineInputView } from 'mn-anytext';
+    import { SingleLineInput } from 'mn-anytext';
 
     export default {
         props: ['value', 'placeholder', 'placeholder-css-class'],
         data() {
             return {
-                view: null
+                input: null
             };
         },
         watch: {
             value(newValue) {
-                const value = this.getValue();
-                if (newValue === value) {
-                    return;
-                }
-
-                this.view.updateValue(newValue == null ? newValue : String(newValue));
+                this.input.value = newValue ;
             }
         },
         mounted() {
             var that = this;
-            this.view = new SingleLineInputView(this.$el, {
-                value: this.value == null ? this.value : String(this.value),
+            this.input = new SingleLineInput(this.$el, {
+                value: this.value,
                 placeholder: {
                     emptyInputCssClass: this.placeholderCssClass,
                     emptyInputText: this.placeholder
                 },
                 onChange() {
-                    that.$emit('input', that.view.state.doc.textContent);
+                    that.$emit('input', that.input.value);
                 }
             });
-        },
-        methods: {
-            getValue() {
-                return this.view.state.doc.textContent;
-            }
         }
     };
 </script>
