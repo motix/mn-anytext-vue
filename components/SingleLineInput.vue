@@ -19,13 +19,13 @@
                     return;
                 }
 
-                this.view.updateValue(newValue);
+                this.view.updateValue(newValue == null ? newValue : String(newValue));
             }
         },
         mounted() {
             var that = this;
             this.view = new SingleLineInputView(this.$el, {
-                value: this.value,
+                value: this.value == null ? this.value : String(this.value),
                 placeholder: {
                     emptyInputCssClass: this.placeholderCssClass,
                     emptyInputText: this.placeholder
