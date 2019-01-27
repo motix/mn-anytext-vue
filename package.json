@@ -1,0 +1,19 @@
+{
+  "name": "mn-anytext-vue",
+  "version": "0.0.1-rc1",
+  "description": "anytext for Vue",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motix/mn-anytext-vue.git"
+  },
+  "author": "Motix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/motix/mn-anytext-vue/issues"
+  },
+  "homepage": "https://github.com/motix/mn-anytext-vue#readme",
+  "dependencies": {
+    "mn-anytext": "0.0.1-rc1"
+  }
+}
