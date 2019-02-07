@@ -1,6 +1,6 @@
 {
   "name": "mn-anytext-vue",
-  "version": "0.0.1-rc3",
+  "version": "0.0.2",
   "description": "anytext for Vue",
   "main": "index.js",
   "repository": {
@@ -14,6 +14,6 @@
   },
   "homepage": "https://github.com/motix/mn-anytext-vue#readme",
   "dependencies": {
-    "mn-anytext": "0.0.1-rc1"
+    "mn-anytext": "0.0.2"
   }
 }
