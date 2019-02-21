@@ -106,7 +106,7 @@
         float: left;
     }
 
-    [data-suffix-text]:first-child::before {
+    [data-suffix-text]:first-child::after {
         content: attr(data-suffix-text);
         float: right;
     }
