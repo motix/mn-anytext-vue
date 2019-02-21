@@ -101,12 +101,12 @@
 </script>
 
 <style>
-    [data-prefix-text]:first-child::before {
+    [data-prefix-text]:not([data-empty-input-text]):first-child::before {
         content: attr(data-prefix-text);
         float: left;
     }
 
-    [data-suffix-text]:first-child::after {
+    [data-suffix-text]:not([data-empty-input-text]):first-child::after {
         content: attr(data-suffix-text);
         float: right;
     }
